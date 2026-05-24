@@ -3,3 +3,374 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: 'montserrat', sans-serif;
+  background-color: var(--principal-color);
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: var(--letters-color);
+}
+
+:root {
+  --principal-color: #000;
+  --letters-color: #fff;
+  --buttons-color: #d83028;
+}
+
+/* LETTERS MANIPULATION */
+
+#title-premiere {
+  color: var(--letters-color);
+  font-size: 25px;
+}
+
+.info-premiere {
+  color: var(--letters-color);
+}
+
+#icon-plus {
+  color: var(--letters-color);
+  font-size: 30px;
+}
+
+header:has(h2) {
+  color: var(--letters-color);
+  letter-spacing: 0.5px;
+  font-size: 18px;
+}
+
+#ctn-header-carteleras h2 {
+  letter-spacing: 0.8px;
+  font-size: 25px;
+}
+
+#ctn-header-carteleras p {
+  letter-spacing: 1.1px;
+  color: #d82510;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ctn-valoracion p {
+  color: var(--buttons-color);
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+}
+
+.ctn-pelicula-cartelera h3 {
+  color: var(--letters-color);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.genero-billboard {
+  color: rgb(236, 236, 236);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  text-shadow: 2px 0px 1px rgba(255, 0, 0, 1);
+}
+
+/* LINKS MANIPULATION */
+
+#btn-play a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  color: var(--letters-color);
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 200;
+  text-decoration: none;
+  font-size: 17px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#ctn-header-carteleras a {
+  text-decoration: none;
+}
+
+/* NAV-BAR */
+nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  height: 70px;
+  background-color: var(--principal-color);
+  border-bottom: 1px solid rgba(92, 92, 92, 0.253);
+  z-index: 10;
+}
+
+/* APARTADO DE ASSETS */
+
+#logo {
+  width: 130px;
+  height: auto;
+}
+
+#search,
+#ubication {
+  width: 30px;
+  height: auto;
+}
+
+#play {
+  width: 20px;
+  height: auto;
+}
+
+/* BUTTONS MANIPULATION */
+
+#btn-search,
+#btn-add,
+#btn-play {
+  background-color: transparent;
+  border: none;
+}
+
+#btn-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 23em;
+  height: 55px;
+  border-radius: 5px;
+  background-color: var(--buttons-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* #btn-play:hover {
+} */
+
+#btn-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px outset rgba(248, 248, 248, 0.589);
+  border-radius: 5px;
+  padding: 1em;
+  height: 55px;
+  min-width: 4.5em;
+  filter: blur(0.7px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+/*
+#btn-add:hover {
+} */
+
+.btn-categoria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 120px;
+  padding: 1em;
+  background-color: #1f1f1f;
+  border: 2px solid #bdb3b350;
+  color: #bdb3b360;
+  font-size: 15px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+}
+
+.btn-categoria:hover {
+  background-color: #2a2a2a;
+  border: 2px solid #a52a29;
+  color: #a52a29;
+}
+
+/* CONTAINERS */
+
+#ctn-nav-assets {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+  padding: 0 1em;
+}
+
+#ctn-nav-btns {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#ctn-red-premiere {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 8px;
+  height: 1.2em;
+  font-size: 12px;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  border-radius: 2px;
+  background-color: var(--buttons-color);
+}
+
+#ctn-time-premiere {
+  font-size: 12.5px;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+#ctn-description-premiere {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 2em;
+  gap: 0.7em;
+  padding: 0.5em;
+}
+
+#ctn-title-premiere {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  padding: 0 0.5em;
+  letter-spacing: -0.2px;
+}
+
+#ctn-btns-premiere {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5em;
+  padding: 1em 1.2em;
+}
+
+#ctn-premiere {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background: url('./assets/imgs/mario-movie.jpg') center/cover no-repeat;
+  min-height: 550px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  opacity: 0.8;
+}
+
+#ctn-categorias {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 150px;
+  min-width: 100%;
+  padding: 1em;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+#ctn-carteleras {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+}
+
+#ctn-peliculas-carteleras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2em;
+  padding: 0.5em 0;
+}
+
+#ctn-btns-categorias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  overflow-x: auto;
+  height: 55px;
+  min-width: 100%;
+}
+
+#ctn-header-carteleras {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+  height: 40px;
+  border-left: 4px solid var(--buttons-color);
+  padding: 10px;
+}
+
+.ctn-img-pelicula {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  height: 250px;
+  width: 170px;
+  border-radius: 5px;
+  padding: 0.5em;
+  border: 2px solid #1d1d1d;
+}
+
+.ctn-valoracion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000c2;
+  width: 1.8em;
+  min-height: 1.3em;
+  border-radius: 2px;
+}
+
+.ctn-pelicula-cartelera {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1em;
+  cursor: pointer;
+}
+
+.ctn-info-billboard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+/* BILLBOARD IMAGES */
+#billboard-1 {
+  background: url('./assets/imgs/billboard-img/michael.jpg') center/cover
+    no-repeat;
+}
+#billboard-2 {
+  background: url('./assets/imgs/billboard-img/diabloviste.jpg') center/cover
+    no-repeat;
+}
+#billboard-3 {
+  background: url('./assets/imgs/billboard-img/maldalorian.jpg') center/cover
+    no-repeat;
+}
+#billboard-4 {
+  background: url('./assets/imgs/billboard-img/mortalkombat.jpg') center/cover
+    no-repeat;
+}
+
+/* MOVIES IMAGES MANIPULATION */
+#mario-img-start {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}

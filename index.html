@@ -12,6 +12,162 @@
 <body>
 
   <main>
+    <header id="header-title">
+      <h1 id="name" hidden>TicketFlick</h1>
+      <nav>
+        <!-- Botones de navegación -->
+        <picture id="ctn-nav-assets">
+          <figure id="ctn-logo">
+            <img src="./src/assets/icons/PNGs/logo.png" alt="Logo" id="logo">
+          </figure>
+          <div id="ctn-nav-btns">
+            <button id="btn-search" type="button">
+              <img src="./src/assets/icons/SVGs/lupa.svg" alt="Buscar" id="search">
+            </button>
+            <!-- Ubicación -->
+            <figure id="ctn-ubication">
+              <a href="#">
+                <img src="./src/assets/icons/PNGs/ubication.png" alt="Ubicación" id="ubication">
+              </a>
+            </figure>
+          </div>
+        </picture>
+      </nav>
+    </header>
+
+
+    <div id="ctn-premiere"> <!-- REOPTIMIZAR ANTES DE DAR PUSH -->
+      <!-- Descripción PREMIERE -->
+      <div id="ctn-description-premiere">
+        <div class="ctn-premiere" id="ctn-red-premiere">
+          <p class="info-premiere">PREMIERE</p>
+        </div>
+        <div class="ctn-premiere" id="ctn-time-premiere">
+          <p class="info-premiere "><b>SCI-FI • 2H 45M</b></p>
+        </div>
+      </div>
+      <!-- Título - PREMIERE -->
+      <div id="ctn-title-premiere">
+        <h2 id="title-premiere">The Super Mario Galaxy</h2>
+      </div>
+
+      <!-- Botones - PREMIERE -->
+      <div id="ctn-btns-premiere">
+
+        <button type="button" id="btn-play">
+          <a href="#">
+            <img src="./src/assets/icons/PNGs/play.png" alt="Reproducir" id="play">
+            <p>Book Now</p>
+          </a>
+        </button>
+
+
+        <button type="button" id="btn-add">
+          <p id="icon-plus">+</p>
+        </button>
+
+      </div>
+
+    </div>
+
+    <section id="ctn-categorias">
+      <header>
+        <h2 data-type="categories">Categories</h2>
+      </header>
+
+      <div id="ctn-btns-categorias">
+        <button type="button" class="btn-categoria">
+          <p>Trending</p>
+        </button>
+
+        <button type="button" class="btn-categoria">
+          <p>Action</p>
+        </button>
+
+        <button type="button" class="btn-categoria">
+          <p>Drama</p>
+        </button>
+
+        <button type="button" class="btn-categoria">
+          <p>Horror</p>
+        </button>
+
+        <button type="button" class="btn-categoria">
+          <p>Comedy</p>
+        </button>
+
+        <button type="button" class="btn-categoria">
+          <p>Science Fiction</p>
+        </button>
+
+        <button type="button" class="btn-categoria">
+          <p>Thriller</p>
+        </button>
+      </div>
+
+    </section>
+
+    <section id="ctn-carteleras">
+      <!-- Encabezado de la cartelera -->
+      <div id="ctn-header-carteleras">
+        <h2>Billboard</h2>
+        <a href="#">
+          <p>VIEW ALL</p>
+        </a>
+      </div>
+
+      <div id="ctn-peliculas-carteleras">
+        <!-- Aquí se cargarán las películas de la cartelera -->
+        <div class="ctn-pelicula-cartelera">
+          <div class="ctn-img-pelicula" id="billboard-1">
+            <div class="ctn-valoracion">
+              <p>8.4</p>
+            </div>
+          </div>
+          <div class="ctn-info-billboard">
+            <h3>Michael</h3>
+            <p class="genero-billboard">Drama &bull; Action</p>
+          </div>
+        </div>
+
+        <div class="ctn-pelicula-cartelera">
+          <div class="ctn-img-pelicula" id="billboard-2">
+            <div class="ctn-valoracion">
+              <p>7.9</p>
+            </div>
+          </div>
+          <div class="ctn-info-billboard">
+            <h3>Diablo Viste 2</h3>
+            <p class="genero-billboard">Comedy &bull; Drama</p>
+          </div>
+        </div>
+
+        <div class="ctn-pelicula-cartelera">
+          <div class="ctn-img-pelicula" id="billboard-3">
+            <div class="ctn-valoracion">
+              <p>9.3</p>
+            </div>
+          </div>
+          <div class="ctn-info-billboard">
+            <h3>Maldalorian</h3>
+            <p class="genero-billboard">Adventure</p>
+          </div>
+        </div>
+
+        <div class="ctn-pelicula-cartelera">
+          <div class="ctn-img-pelicula" id="billboard-4">
+            <div class="ctn-valoracion">
+              <p>8.6</p>
+            </div>
+          </div>
+          <div class="ctn-info-billboard">
+            <h3> Mortal Kombat </h3>
+            <p class="genero-billboard">Action</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 
