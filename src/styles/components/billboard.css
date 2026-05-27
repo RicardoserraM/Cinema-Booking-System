@@ -1,0 +1,103 @@
+#ctn-carteleras {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+}
+
+.ctn-peliculas-carteleras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2em;
+  padding: 0.5em 0;
+}
+
+.ctn-pelicula-cartelera {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctn-pelicula-cartelera:active {
+  transform: scale(0.95);
+}
+
+.ctn-pelicula-cartelera h3 {
+  color: var(--letters-color);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.ctn-header-carteleras {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+  height: 40px;
+  border-left: 4px solid var(--buttons-color);
+  padding: 10px;
+}
+
+.ctn-header-carteleras h2 {
+  letter-spacing: 0.8px;
+  font-size: 25px;
+}
+
+.ctn-header-carteleras a {
+  letter-spacing: 1.1px;
+  color: #d82510;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ctn-header-carteleras a {
+  text-decoration: none;
+}
+
+.ctn-img-pelicula {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  height: 250px;
+  width: 170px;
+  border-radius: 5px;
+  padding: 0.5em;
+  border: 2px solid #1d1d1d;
+}
+
+.ctn-valoracion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000c2;
+  width: 1.8em;
+  height: 1.3em;
+  padding: 0.7em;
+  border-radius: 2px;
+}
+
+.ctn-info-billboard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.genero-billboard {
+  color: rgba(236, 236, 236, 0.808);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  text-shadow: 1px 0px 1px rgba(255, 0, 0, 1);
+}
+
+.ctn-valoracion p {
+  color: var(--buttons-color);
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+}

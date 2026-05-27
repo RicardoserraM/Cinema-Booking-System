@@ -1,0 +1,97 @@
+#ctn-member-rewards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5em;
+  width: 100%;
+  height: 20em;
+  padding: 2em;
+  line-height: 1.3em;
+  border-radius: 8px;
+  border: 1px solid #3a2120;
+  background: linear-gradient(
+    -160deg,
+    rgba(255, 90, 90, 0.212) 0%,
+    rgba(78, 72, 72, 0.24) 50%,
+    rgba(226, 217, 217, 0.103) 100%
+  );
+}
+
+.ctn-header-rewards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.ctn-header-rewards p,
+.progress-text > :nth-child(2) {
+  font-size: 15px;
+  color: rgba(236, 236, 236, 0.808);
+  letter-spacing: 1px;
+  text-shadow: 1px 0px 1px rgba(255, 0, 0, 1);
+}
+
+.ctn-progress-bar {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.progress-fill {
+  display: flex;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background-color: #373535;
+}
+
+.progress-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ctn-rewards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.ctn-rewards-info-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.ctn-icons-rewards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #5d2220;
+  border-radius: 10px;
+  width: 3.2em;
+  height: 3.2em;
+  padding: 0.5em;
+  background: linear-gradient(
+    -160deg,
+    rgba(255, 90, 90, 0.11) 0%,
+    rgba(79, 79, 83, 0.137) 100%
+  );
+}
+
+.progress-text > :nth-child(1) {
+  font-size: 15px;
+  color: rgba(255, 0, 0, 0.986);
+}
+
+.ctn-rewards-info-icons figcaption {
+  font-size: 10px;
+  color: rgb(209, 209, 209);
+  letter-spacing: 0.3px;
+}

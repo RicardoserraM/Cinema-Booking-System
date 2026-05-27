@@ -1,0 +1,70 @@
+/* MOVIES IMAGES MANIPULATION */
+#mario-img-start {
+  width: 100%;
+  opacity: 0.8;
+}
+
+#ctn-premiere {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background: url('/src/assets/imgs/img-premiere/mario.jpg') center/cover
+    no-repeat;
+  min-height: 550px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  opacity: 0.8;
+}
+
+.ctn-description-premiere {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 2em;
+  gap: 0.7em;
+  padding: 0.5em;
+}
+
+.ctn-premiere-info {
+  display: flex;
+  gap: 0.5em;
+}
+
+.time-premiere {
+  font-size: 12.5px;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.title-premiere,
+.icon-plus {
+  color: var(--letters-color);
+  font-size: 25px;
+}
+
+.premiere {
+  color: var(--letters-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 8px;
+  height: 1.2em;
+  font-size: 12px;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  border-radius: 2px;
+  background-color: var(--buttons-color);
+}
+
+.ctn-btns-premiere {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 1em;
+  padding: 0.6em 0 1em 0.6em;
+}
