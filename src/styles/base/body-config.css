@@ -1,7 +1,5 @@
 body {
-  font-family: 'montserrat', sans-serif; /*TIPO DE LETRA MOMENTANEO*/
+  font-family: 'montserrat', sans-serif;
   background-color: var(--principal-color);
-  overflow-x: hidden;
-  overflow-y: auto;
   color: var(--letters-color);
 }

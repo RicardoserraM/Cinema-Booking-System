@@ -1,0 +1,144 @@
+/* COMPONENTES REUTILIZADOS*/
+@import '../base/reset.css';
+@import '../base/variables.css';
+@import '../base/body-config.css';
+@import '../components/nav.css';
+@import '../components/icons.css';
+
+/* NAV EDITIONS */
+#top-nav {
+  position: sticky;
+}
+.ctn-nav-btns a {
+  color: var(--letters-color);
+}
+
+/* CONTAINER PELICULA SELECCIONADA / INFO */
+.ctn-info-pelicula-seleccionada {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 1.5em 0;
+}
+.info-pelicula-seleccionada {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3em;
+}
+.info-pelicula-seleccionada p {
+  color: rgba(236, 236, 236, 0.808);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 1px 0px 1px rgba(255, 0, 0, 1);
+  padding-bottom: 0.5em;
+}
+.ctn-age-valoration {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.ctn-age-valoration > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 0.1em 0.6em;
+  background-color: #353434;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.ctn-valoration-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+.valoration-icon {
+  width: 13px;
+}
+.ctn-valoration-info > span {
+  font-weight: 700;
+  font-size: 12px;
+  color: rgb(221, 7, 7);
+}
+
+/* IMAGEN SELECCIONADA CONFIG */
+.pelicula-seleccionada {
+  background: no-repeat center/cover
+    url('/src/assets/imgs/img-premiere/mario.jpg');
+  width: 100px;
+  height: 150px;
+  border: 1px solid #1f2325;
+  border-radius: 4px;
+}
+
+/* APARTADO DE FECHAS DE CITAS */
+
+.ctn-select-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 1em 1em 1em;
+  gap: 0.8em;
+  width: 100%;
+}
+
+.ctn-dates {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 0.6em;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: clamp(3em, 4em, 4.5em);
+  height: 5em;
+  border: 1px solid #5b3d39;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  background-color: #221f1f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.date:hover {
+  border: 1px solid #9d201a;
+}
+
+.date:nth-child(1) {
+  background-color: #d72f27;
+  border: 1px solid #d72f27;
+}
+
+.date:nth-child(1) span:nth-child(2n + 1) {
+  color: white;
+}
+
+.date span:nth-child(2n + 1) {
+  font-size: 13px;
+  font-weight: 600;
+  color: #94928e;
+}
+
+.date span:nth-child(2) {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.ctn-select-date > span {
+  color: rgba(236, 236, 236, 0.808);
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: 1px 0px 1px rgba(255, 0, 0, 1);
+}
+
+/* SHOW TIME FULL SECTION */
