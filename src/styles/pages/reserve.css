@@ -76,12 +76,10 @@
 }
 
 /* APARTADO DE FECHAS DE CITAS */
-
 .ctn-select-date {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
   padding: 0 1em 1em 1em;
   gap: 0.8em;
   width: 100%;
@@ -98,39 +96,26 @@
 .date {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: clamp(3em, 4em, 4.5em);
-  height: 5em;
-  border: 1px solid #5b3d39;
+  font-family: Montserrat, sans-serif;
+  width: 5.2em;
+  height: 6.5em;
+  color: var(--letters-color);
+  border: 2px solid #5b3d39;
   border-radius: 5px;
-  padding: 0.5em 1em;
   background-color: #221f1f;
-  cursor: pointer;
+  line-height: 1.8em;
   transition: all 0.3s ease;
 }
 
-.date:hover {
-  border: 1px solid #9d201a;
-}
-
-.date:nth-child(1) {
-  background-color: #d72f27;
-  border: 1px solid #d72f27;
-}
-
-.date:nth-child(1) span:nth-child(2n + 1) {
-  color: white;
-}
-
 .date span:nth-child(2n + 1) {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: #94928e;
 }
 
 .date span:nth-child(2) {
-  font-size: 24px;
+  font-size: 27px;
   font-weight: 700;
 }
 
@@ -141,4 +126,62 @@
   text-shadow: 1px 0px 1px rgba(255, 0, 0, 1);
 }
 
+.date:hover {
+  border: 2px solid #9d201a;
+}
+
+.date:focus {
+  border: 2px solid #d72f27;
+  background-color: #d73028;
+}
+
+.date:focus span:nth-child(2n + 1) {
+  color: white;
+}
+
+.date:active {
+  transform: scale(0.95);
+}
+
 /* SHOW TIME FULL SECTION */
+.ctn-showtimes {
+  display: flex;
+  flex-direction: column;
+  place-items: flex-start;
+  padding: 1em;
+  gap: 0.8em;
+  width: 100%;
+}
+
+.ctn-showtimes span {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(236, 236, 236, 0.808);
+  text-shadow: 1px 0px 1px rgba(255, 0, 0, 1);
+}
+
+.ctn-schedules {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7em;
+}
+
+.time {
+  font-weight: 600;
+  font-family: montserrat, sans-serif;
+  color: var(--letters-color);
+  letter-spacing: 1px;
+  background-color: transparent;
+  border: 2px solid #382624;
+  padding: 0.8em 2.2em;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.time:hover {
+  border: 2px solid #9d201a;
+}
+.time:focus {
+  border: 2px solid transparent;
+  background-color: #d73028;
+}
