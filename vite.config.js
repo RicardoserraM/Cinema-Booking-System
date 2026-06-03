@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         reserve: resolve(__dirname, 'reserve-section.html'),
+        finish: resolve(__dirname, 'finish-booking.html'),
       },
     },
   },
