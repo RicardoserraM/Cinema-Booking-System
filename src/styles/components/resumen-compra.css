@@ -1,0 +1,38 @@
+/* RESUMEN COMPRA - SECCION DE PRECIOS Y TOTAL */
+.ctn-resume-total {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 1.4em;
+  border-top: 2px solid #3a2926;
+  background: rgba(0, 0, 0, 0.707);
+}
+
+.ctn-total-price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.ctn-total-price span:nth-child(2) {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.ctn-total-price > span:nth-child(1) {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(236, 236, 236, 0.808);
+  text-shadow: 1px 0px 1px rgba(255, 0, 0, 1);
+}
+
+.ctn-total-price p {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #d73028;
+}

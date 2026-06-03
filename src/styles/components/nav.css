@@ -82,3 +82,11 @@
 span[data-name='movies'] {
   color: #d83028;
 }
+
+/* NAV EDITIONS - SECCION RESERVA */
+#top-nav {
+  position: sticky;
+}
+.ctn-nav-btns a {
+  color: var(--letters-color);
+}

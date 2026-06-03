@@ -1,9 +1,11 @@
-/* Reset de estilos, variables y estilos de body */
+/* --- PAGINA HOME - CUSTOM STYLES --- */
+
+/* IMPORTACIONES BASE */
 @import '../base/reset.css';
 @import '../base/body-config.css';
 @import '../base/variables.css';
 
-/* Componentes */
+/* IMPORTACIONES COMPONENTES */
 @import '../components/icons.css';
 @import '../components/nav.css';
 @import '../components/buttons.css';

@@ -65,3 +65,24 @@
   border: 2px solid #a52a29;
   color: #a52a29;
 }
+
+/* APARTADO DE RESUMEN DE COMPRA */
+.btn-buy {
+  font-family: Montserrat, 'sans-serif';
+  background: linear-gradient(75deg, #d73028 0%, #9d201a 50%, #d73028 100%);
+  padding: 1em 1.5em;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  box-shadow: 0 3px 10px rgba(215, 48, 40, 0.5);
+  transition: all 0.1s ease-out;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-buy:active {
+  transform: scale(0.9);
+}
