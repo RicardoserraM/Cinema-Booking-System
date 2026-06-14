@@ -14,8 +14,8 @@
   cursor: pointer;
   gap: 0.5em;
   color: var(--letters-color);
-  font-family: 'Helvetica', sans-serif;
-  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   text-decoration: none;
   font-size: 15px;
   letter-spacing: 1px;
@@ -31,7 +31,7 @@
   padding: 1em;
   height: 50px;
   min-width: 4em;
-  filter: blur(0.7px);
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: transparent;

@@ -23,3 +23,13 @@ body {
   width: 100%;
   padding: 20px;
 }
+
+@media (min-width: 1024px) {
+  .main-finish-booking {
+    padding: 4em var(--margin-desktop);
+  }
+
+  .ctn-aviso-finish-booking {
+    max-width: 520px;
+  }
+}

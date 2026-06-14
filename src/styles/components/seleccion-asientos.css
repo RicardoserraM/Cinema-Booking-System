@@ -1,27 +1,44 @@
 /* SECCION DE PANTALLA */
 .ctn-screen {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding: 1em 0;
-  height: 5em;
+  padding: 2em 0 1em;
   gap: 1.2em;
   margin-bottom: 2em;
+}
+
+.screen-glow {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(216, 48, 40, 0.35) 0%, transparent 100%);
+  filter: blur(15px);
+  pointer-events: none;
 }
 
 .screen-line {
   width: 80%;
   height: 4px;
-  background: linear-gradient(90deg, #38262431 0%, #d73028 50%, #38262431 100%);
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 1;
 }
 
 .ctn-screen span {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 7px;
-  color: rgba(236, 236, 236, 0.808);
-  text-shadow: 1px 0px 1px rgba(255, 0, 0, 1);
+  letter-spacing: 0.4em;
+  color: var(--on-surface-variant);
+  opacity: 0.4;
 }
 
 /* APARTADO DE SELECCION DE ASIENTOS */
@@ -36,30 +53,121 @@
   margin-bottom: 8em;
 }
 
-.ctn-top-seat,
+.ctn-top-seat {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) 1em repeat(5, 1fr);
+  gap: 3px;
+  width: 100%;
+  padding: 0 1em;
+}
+
+.ctn-top-seat .seat:nth-child(10n + 6) {
+  grid-column-start: 7;
+}
+
 .ctn-bottom-seat {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 0.5em;
+  grid-template-columns: repeat(5, 1fr) 1em repeat(5, 1fr);
+  gap: 3px;
+  width: 100%;
+  padding: 0 1em;
+}
+
+.ctn-bottom-seat .seat:nth-child(8n + 1) {
+  grid-column-start: 2;
+}
+
+.ctn-bottom-seat .seat:nth-child(8n + 5) {
+  grid-column-start: 7;
 }
 
 .seat {
-  width: 2.5em;
-  height: 2.5em;
-  background-color: #2a2828;
-  border: 1px solid #3c2a27;
-  border-radius: 10px 10px 0 0;
-  transition: all 0.2s ease-out;
+  position: relative;
+  width: 100%;
+  max-width: 2.5em;
+  aspect-ratio: 1;
+  background: linear-gradient(180deg, #322b2a 0%, #1e1919 100%);
+  border: 1px solid #4a3431;
+  border-radius: 6px 6px 3px 3px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.seat::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 8px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.seat:hover {
+  background: linear-gradient(180deg, #463b39 0%, #2a2222 100%);
+  border-color: var(--buttons-color);
+  box-shadow: 0 0 10px rgba(216, 48, 40, 0.4);
+  transform: translateY(-1px);
 }
 
 .seat:active {
-  transform: scale(0.8);
+  transform: scale(0.9) translateY(0);
 }
 
-.seat:focus {
-  background-color: #d73028;
-  box-shadow: 0 3px 10px rgba(215, 48, 40, 0.5);
+.seat:focus,
+.seat.selected {
+  background: linear-gradient(180deg, #d73028 0%, #a81c16 100%);
+  border-color: #ff7670;
+  box-shadow: 0 0 12px rgba(215, 48, 40, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.seat:focus::after,
+.seat.selected::after {
+  background: rgba(255, 255, 255, 0.15);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.seat.reserved {
+  background: #141212;
+  border-color: #2c2524;
+  box-shadow: none;
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.seat.reserved::after {
+  display: none;
+}
+
+.seat.reserved .seat-label {
+  display: none;
+}
+
+.seat-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 9px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  transition: color 0.2s ease;
+  z-index: 1;
+}
+
+.seat:hover .seat-label,
+.seat:focus .seat-label,
+.seat.selected .seat-label {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* APARTADO DE ESTADO DE ASIENTOS */
@@ -70,8 +178,7 @@
   gap: 1.5em;
   font-size: 14px;
   font-weight: 600;
-  color: rgba(236, 236, 236, 0.808);
-  text-shadow: 1px 0px 1px rgba(255, 0, 0, 1);
+  color: var(--on-surface-variant);
   margin-bottom: 3em;
 }
 

@@ -14,3 +14,8 @@
 @import '../components/billboard.css';
 @import '../components/rewards.css';
 @import '../components/footer.css';
+@import '../base/responsive-home.css';
+
+.desktop-only {
+  display: none;
+}

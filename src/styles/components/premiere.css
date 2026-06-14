@@ -1,20 +1,14 @@
-/* MOVIES IMAGES MANIPULATION */
-#mario-img-start {
-  width: 100%;
-  opacity: 0.8;
-}
-
 #ctn-premiere {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  background: url('/src/assets/imgs/img-premiere/mario.jpg') center/cover
+  background: url('./src/assets/imgs/img-premiere/mario.jpg') center/cover
     no-repeat;
   min-height: 550px;
   width: 100%;
   border-radius: 0 0 10px 10px;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .ctn-description-premiere {

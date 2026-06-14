@@ -8,8 +8,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 1em 1.4em;
-  border-top: 2px solid #3a2926;
-  background: rgba(0, 0, 0, 0.707);
+  border-top: 2px solid rgba(216, 48, 40, 0.2);
+  background: rgba(10, 8, 8, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .ctn-total-price {
@@ -26,8 +28,7 @@
 .ctn-total-price > span:nth-child(1) {
   font-size: 16px;
   font-weight: 600;
-  color: rgba(236, 236, 236, 0.808);
-  text-shadow: 1px 0px 1px rgba(255, 0, 0, 1);
+  color: var(--on-surface-variant);
 }
 
 .ctn-total-price p {

@@ -2,4 +2,14 @@
   --principal-color: #000;
   --letters-color: #fff;
   --buttons-color: #d83028;
+  --outline-variant: #5e3f3b;
+  --surface-container: #1f1f1f;
+  --surface-container-high: #2a2a2a;
+  --surface-container-lowest: #0e0e0e;
+  --on-surface-variant: rgba(236, 236, 236, 0.808);
+  --container-max: 1440px;
+  --margin-mobile: 16px;
+  --margin-desktop: 48px;
+  --gutter: 24px;
+  --desktop-breakpoint: 1024px;
 }

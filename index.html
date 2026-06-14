@@ -5,116 +5,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TicketFlick - Home</title>
-  <!-- WEB ICON -->
   <link rel="icon" href="./src/assets/icons/PNGs/favicon.png" type="image/png">
 </head>
 
 <body>
 
-  <main>
-    <header id="header-title">
-      <nav id="top-nav" aria-label="Barra de navegación principal - Top NavBar">
-        <!-- Botones de navegación -->
-        <div class="ctn-nav-assets">
-          <img src="./src/assets/icons/PNGs/logo.png" alt="Logo" class="logo">
+  <header id="header-title">
+    <nav id="top-nav" aria-label="Barra de navegación principal">
+      <div class="ctn-nav-assets">
+        <a href="./index.html" class="nav-brand">
+          <img src="./src/assets/icons/PNGs/logo.png" alt="" class="logo" aria-hidden="true">
+          <span class="brand-name">TicketFlick</span>
+        </a>
 
-          <div class="ctn-nav-btns">
-            <button class="btn-search" type="button">
-              <img src="./src/assets/icons/SVGs/lupa.svg" alt="Buscar" class="search">
+        <ul class="nav-desktop-links" aria-label="Enlaces de navegación">
+          <li><a href="#" class="nav-desktop-link active">Movies</a></li>
+          <li><a href="#" class="nav-desktop-link">Offers</a></li>
+          <li><a href="#" class="nav-desktop-link">Profile</a></li>
+        </ul>
+
+        <div class="ctn-nav-btns">
+            <button class="btn-search" type="button" aria-label="Buscar">
+              <img src="./src/assets/icons/SVGs/lupa.svg" alt="" class="search" aria-hidden="true">
             </button>
-            <!-- Ubicación -->
-            <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-map-pin-icon lucide-map-pin">
-                <path
-                  d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-            </a>
-          </div>
-
+          <a href="#" class="nav-location" aria-label="Ubicación">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </a>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-
+  <main>
     <section id="ctn-premiere">
-      <!-- Descripción PREMIERE -->
       <article class="ctn-description-premiere">
         <div class="ctn-premiere-info">
           <span class="premiere">PREMIERE</span>
-          <span class="time-premiere"><b>SCI-FI • 2H 45M</b></span>
+          <span class="time-premiere"><b>SCI-FI &bull; 2H 45M</b></span>
         </div>
         <h2 class="title-premiere">The Super Mario Galaxy</h2>
       </article>
 
-      <!-- Botones - PREMIERE -->
       <div class="ctn-btns-premiere">
-
         <a href="./reserve-section.html" class="btn-play" target="_self">
-          <img src="./src/assets/icons/PNGs/play.png" alt="Reproducir" class="play">
+          <img src="./src/assets/icons/PNGs/play.png" alt="" class="play" aria-hidden="true">
           Book Now
         </a>
-
-        <button type="button" class="btn-add">
+        <button type="button" class="btn-add" aria-label="Añadir a favoritos">
           <p class="icon-plus">+</p>
         </button>
-
       </div>
-
     </section>
 
     <section id="ctn-categorias">
       <header>
         <h2 data-type="categories">Categories</h2>
       </header>
-
       <div class="ctn-btns-categorias">
-        <button type="button" class="btn-categoria">
-          <p>Trending</p>
-        </button>
-
-        <button type="button" class="btn-categoria">
-          <p>Action</p>
-        </button>
-
-        <button type="button" class="btn-categoria">
-          <p>Drama</p>
-        </button>
-
-        <button type="button" class="btn-categoria">
-          <p>Horror</p>
-        </button>
-
-        <button type="button" class="btn-categoria">
-          <p>Comedy</p>
-        </button>
-
-        <button type="button" class="btn-categoria">
-          <p>Thriller</p>
-        </button>
+        <button type="button" class="btn-categoria"><p>Trending</p></button>
+        <button type="button" class="btn-categoria"><p>Action</p></button>
+        <button type="button" class="btn-categoria"><p>Drama</p></button>
+        <button type="button" class="btn-categoria"><p>Horror</p></button>
+        <button type="button" class="btn-categoria"><p>Comedy</p></button>
+        <button type="button" class="btn-categoria"><p>Thriller</p></button>
       </div>
-
     </section>
 
     <section id="ctn-carteleras">
-      <!-- Encabezado de la cartelera -->
       <div class="ctn-header-carteleras">
         <h2>Billboard</h2>
-        <a href="#">
-          VIEW ALL
-        </a>
+        <a href="#">VIEW ALL</a>
       </div>
 
       <div class="ctn-peliculas-carteleras">
-        <!-- Aquí se cargarán las películas de la cartelera -->
         <div class="ctn-pelicula-cartelera">
           <div class="ctn-img-pelicula"
-            style="background: url('./src/assets/imgs/billboard-img/michael.jpg') center/cover no-repeat">
-            <div class="ctn-valoracion">
-              <p>8.4</p>
-            </div>
+            style="background-image: url('./src/assets/imgs/billboard-img/michael.jpg')">
+            <div class="ctn-valoracion"><p>8.4</p></div>
           </div>
           <article class="ctn-info-billboard">
             <h3>Michael</h3>
@@ -124,10 +96,8 @@
 
         <div class="ctn-pelicula-cartelera">
           <div class="ctn-img-pelicula"
-            style="background: url('./src/assets/imgs/billboard-img/diabloviste.jpg') center/cover no-repeat">
-            <div class="ctn-valoracion">
-              <p>7.9</p>
-            </div>
+            style="background-image: url('./src/assets/imgs/billboard-img/diabloviste.jpg')">
+            <div class="ctn-valoracion"><p>7.9</p></div>
           </div>
           <article class="ctn-info-billboard">
             <h3>Diablo Viste 2</h3>
@@ -137,10 +107,8 @@
 
         <div class="ctn-pelicula-cartelera">
           <div class="ctn-img-pelicula"
-            style="background: url('./src/assets/imgs/billboard-img/maldalorian.jpg') center/cover no-repeat">
-            <div class=" ctn-valoracion">
-              <p>9.3</p>
-            </div>
+            style="background-image: url('./src/assets/imgs/billboard-img/maldalorian.jpg')">
+            <div class="ctn-valoracion"><p>9.3</p></div>
           </div>
           <article class="ctn-info-billboard">
             <h3>Maldalorian</h3>
@@ -150,13 +118,11 @@
 
         <div class="ctn-pelicula-cartelera">
           <div class="ctn-img-pelicula"
-            style="background: url('./src/assets/imgs/billboard-img/mortalkombat.jpg') center/cover no-repeat">
-            <div class="ctn-valoracion">
-              <p>8.6</p>
-            </div>
+            style="background-image: url('./src/assets/imgs/billboard-img/mortalkombat.jpg')">
+            <div class="ctn-valoracion"><p>8.6</p></div>
           </div>
           <article class="ctn-info-billboard">
-            <h3> Mortal Kombat </h3>
+            <h3>Mortal Kombat</h3>
             <p class="genero-billboard">Action</p>
           </article>
         </div>
@@ -166,8 +132,7 @@
     <section id="ctn-member-rewards">
       <header class="ctn-header-rewards">
         <h2>Member Rewards</h2>
-        <p>You've watched <span id="movies-watched">0</span> movies this year. Keep it up for a free Premiere ticket!
-        </p>
+        <p>You've watched <span id="movies-watched">0</span> movies this year. Keep it up for a free Premiere ticket!</p>
       </header>
 
       <div class="ctn-progress-bar">
@@ -179,92 +144,144 @@
       </div>
 
       <div class="ctn-rewards">
-
         <figure class="ctn-rewards-info-icons">
           <div class="ctn-icons-rewards">
             <img src="./src/assets/icons/PNGs/tickets.png" alt="Tickets" title="Reward" class="reward-icon">
           </div>
           <figcaption>VOUCHERS</figcaption>
         </figure>
-
         <figure class="ctn-rewards-info-icons">
           <div class="ctn-icons-rewards">
             <img src="./src/assets/icons/PNGs/star.png" alt="Star" title="Reward" class="reward-icon">
           </div>
-          <figcaption>VOUCHERS</figcaption>
+          <figcaption>POINTS</figcaption>
         </figure>
-
         <figure class="ctn-rewards-info-icons">
           <div class="ctn-icons-rewards">
             <img src="./src/assets/icons/PNGs/gift.png" alt="Gift" title="Reward" class="reward-icon">
           </div>
           <figcaption>GIFTS</figcaption>
         </figure>
+      </div>
+    </section>
 
+    <!-- SECTION DESKTOP-ONLY: Advanced Filters & Dulcería Promos -->
+    <section id="ctn-filters-sidebar" class="desktop-only">
+      <header class="sidebar-header">
+        <h3>Advanced Filters</h3>
+      </header>
+      <div class="filter-group">
+        <span class="filter-label">Format</span>
+        <div class="filter-options">
+          <button type="button" class="filter-btn active">All</button>
+          <button type="button" class="filter-btn">2D</button>
+          <button type="button" class="filter-btn">3D</button>
+          <button type="button" class="filter-btn">IMAX</button>
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">Language</span>
+        <div class="filter-options">
+          <button type="button" class="filter-btn active">All</button>
+          <button type="button" class="filter-btn">Subbed</button>
+          <button type="button" class="filter-btn">Dubbed</button>
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">Auditorium</span>
+        <div class="filter-select-wrapper">
+          <select class="filter-select">
+            <option>All Rooms</option>
+            <option>VIP Lounge</option>
+            <option>IMAX Theatre</option>
+            <option>Standard Room</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section id="ctn-dulceria-promos" class="desktop-only">
+      <header class="ctn-header-dulceria">
+        <h2>Candy Bar Promos</h2>
+      </header>
+      <div class="dulceria-grid">
+        <div class="dulceria-card">
+          <div class="dulceria-img-wrapper">
+            <span class="promo-badge">POPULAR</span>
+            <svg class="promo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3h12l1 18H5L6 3z"></path>
+              <path d="M9 3v18M15 3v18M6 8h12M6 14h12"></path>
+            </svg>
+          </div>
+          <div class="dulceria-info">
+            <h4>Combo Duo Popcorn</h4>
+            <p>1 Large Popcorn + 2 Large Sodas. Save 20% on online bookings!</p>
+            <span class="promo-price">$14.50</span>
+          </div>
+        </div>
+        
+        <div class="dulceria-card">
+          <div class="dulceria-img-wrapper">
+            <span class="promo-badge">HOT DEAL</span>
+            <svg class="promo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M2 12h20"></path>
+              <circle cx="12" cy="12" r="8"></circle>
+            </svg>
+          </div>
+          <div class="dulceria-info">
+            <h4>Sweet Treat Pack</h4>
+            <p>1 Medium Popcorn + 1 Candy Packet + 1 Soda. Perfect companion!</p>
+            <span class="promo-price">$9.99</span>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <img src="./src/assets/icons/PNGs/logo.png" alt="logo" title="TicketFlick" class="logo">
-
+    <a href="./index.html" class="footer-brand">
+      <img src="./src/assets/icons/PNGs/logo.png" alt="" class="logo" aria-hidden="true">
+      <span class="brand-name">TicketFlick</span>
+    </a>
     <div class="ctn-help-options">
       <a href="#" class="help-option">Privacy Policy</a>
       <a href="#" class="help-option">Help Center</a>
       <a href="#" class="help-option">Contact Us</a>
     </div>
-
     <p class="copy-footer">&copy; 2026 TicketFlick Entertainment. All Rights Reserved.</p>
   </footer>
 
-  <nav id="bottom-nav" aria-label="Barra de navegación segundaria - Bottom NavBar">
-
-    <div class="ctn-nav-bottom-options">
-
-      <div class="ctn-nav-bottom-info-icon offers-and-profile">
-        <svg fill=#a89693 height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" enable-background="new 0 0 50 50"
-          xml:space="preserve">
+  <nav id="bottom-nav" aria-label="Barra de navegación inferior">
+      <div class="ctn-nav-bottom-options">
+      <button type="button" class="ctn-nav-bottom-info-icon offers-and-profile">
+        <svg fill="#a89693" height="30px" width="30px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
           <path d="M24.896,9.463c-0.188-0.188-0.441-0.293-0.707-0.293L11.232,9.169c-0.551,0-0.998,0.445-1,0.996L10.186,23.17
-                c-0.001,0.267,0.104,0.522,0.293,0.711l16.995,16.995c0.188,0.188,0.441,0.293,0.707,0.293s0.52-0.105,0.707-0.293l13.004-13.004
-                c0.391-0.391,0.391-1.023,0-1.414L24.896,9.463z M28.181,38.755L12.188,22.761l0.041-11.592l11.547,0.001l15.995,15.995
-                L28.181,38.755z" />
+            c-0.001,0.267,0.104,0.522,0.293,0.711l16.995,16.995c0.188,0.188,0.441,0.293,0.707,0.293s0.52-0.105,0.707-0.293l13.004-13.004
+            c0.391-0.391,0.391-1.023,0-1.414L24.896,9.463z M28.181,38.755L12.188,22.761l0.041-11.592l11.547,0.001l15.995,15.995
+            L28.181,38.755z" />
           <circle cx="20.362" cy="19.346" r="2.61" />
         </svg>
-        <figcaption>Offers</figcaption>
-      </div>
-      <div class="ctn-nav-bottom-info-icon">
-        <svg fill=#D83028 height="25px" width="25px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve">
+        <span>Offers</span>
+      </button>
+      <button type="button" class="ctn-nav-bottom-info-icon">
+        <svg fill="#D83028" height="25px" width="25px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <path d="M31.6,5.2C31.4,5,31,5,30.7,5C21.1,7.6,10.9,7.6,1.3,5C1,5,0.6,5,0.4,5.2C0.1,5.4,0,5.7,0,6v20c0,0.3,0.1,0.6,0.4,0.8
-        	S1,27,1.3,27c9.6-2.6,19.8-2.6,29.5,0c0.1,0,0.2,0,0.3,0c0.2,0,0.4-0.1,0.6-0.2c0.2-0.2,0.4-0.5,0.4-0.8V6C32,5.7,31.9,5.4,31.6,5.2
-        	z M20.1,17.7l-5,3c-0.3,0.2-0.7,0.3-1,0.3c-0.3,0-0.7-0.1-1-0.3c-0.6-0.4-1-1-1-1.7V13c0-0.7,0.4-1.3,1-1.7c0.6-0.4,1.4-0.3,2,0l5,3
-        	c0.6,0.4,0.9,1,0.9,1.7S20.6,17.3,20.1,17.7z" />
+            S1,27,1.3,27c9.6-2.6,19.8-2.6,29.5,0c0.1,0,0.2,0,0.3,0c0.2,0,0.4-0.1,0.6-0.2c0.2-0.2,0.4-0.5,0.4-0.8V6C32,5.7,31.9,5.4,31.6,5.2
+            z M20.1,17.7l-5,3c-0.3,0.2-0.7,0.3-1,0.3c-0.3,0-0.7-0.1-1-0.3c-0.6-0.4-1-1-1-1.7V13c0-0.7,0.4-1.3,1-1.7c0.6-0.4,1.4-0.3,2,0l5,3
+            c0.6,0.4,0.9,1,0.9,1.7S20.6,17.3,20.1,17.7z" />
         </svg>
-        <figcaption><span data-name="movies">Movies</span></figcaption>
-      </div>
-
-      <div class="ctn-nav-bottom-info-icon offers-and-profile">
-        <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" fill=#a89693>
-
-          <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -2159.000000)">
-            <g id="icons" transform="translate(56.000000, 160.000000)">
-              <path
-                d="M100.562548,2016.99998 L87.4381713,2016.99998 C86.7317804,2016.99998 86.2101535,2016.30298 86.4765813,2015.66198 C87.7127655,2012.69798 90.6169306,2010.99998 93.9998492,2010.99998 C97.3837885,2010.99998 100.287954,2012.69798 101.524138,2015.66198 C101.790566,2016.30298 101.268939,2016.99998 100.562548,2016.99998 M89.9166645,2004.99998 C89.9166645,2002.79398 91.7489936,2000.99998 93.9998492,2000.99998 C96.2517256,2000.99998 98.0830339,2002.79398 98.0830339,2004.99998 C98.0830339,2007.20598 96.2517256,2008.99998 93.9998492,2008.99998 C91.7489936,2008.99998 89.9166645,2007.20598 89.9166645,2004.99998 M103.955674,2016.63598 C103.213556,2013.27698 100.892265,2010.79798 97.837022,2009.67298 C99.4560048,2008.39598 100.400241,2006.33098 100.053171,2004.06998 C99.6509769,2001.44698 97.4235996,1999.34798 94.7348224,1999.04198 C91.0232075,1998.61898 87.8750721,2001.44898 87.8750721,2004.99998 C87.8750721,2006.88998 88.7692896,2008.57398 90.1636971,2009.67298 C87.1074334,2010.79798 84.7871636,2013.27698 84.044024,2016.63598 C83.7745338,2017.85698 84.7789973,2018.99998 86.0539717,2018.99998 L101.945727,2018.99998 C103.221722,2018.99998 104.226185,2017.85698 103.955674,2016.63598"
-                id="profile_round-[#1342]">
-
-              </path>
-            </g>
-          </g>
+        <span data-name="movies">Movies</span>
+      </button>
+      <button type="button" class="ctn-nav-bottom-info-icon offers-and-profile">
+        <svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#a89693">
+          <path d="M100.562548,2016.99998 L87.4381713,2016.99998 C86.7317804,2016.99998 86.2101535,2016.30298 86.4765813,2015.66198 C87.7127655,2012.69798 90.6169306,2010.99998 93.9998492,2010.99998 C97.3837885,2010.99998 100.287954,2012.69798 101.524138,2015.66198 C101.790566,2016.30298 101.268939,2016.99998 100.562548,2016.99998 M89.9166645,2004.99998 C89.9166645,2002.79398 91.7489936,2000.99998 93.9998492,2000.99998 C96.2517256,2000.99998 98.0830339,2002.79398 98.0830339,2004.99998 C98.0830339,2007.20598 96.2517256,2008.99998 93.9998492,2008.99998 C91.7489936,2008.99998 89.9166645,2007.20598 89.9166645,2004.99998 M103.955674,2016.63598 C103.213556,2013.27698 100.892265,2010.79798 97.837022,2009.67298 C99.4560048,2008.39598 100.400241,2006.33098 100.053171,2004.06998 C99.6509769,2001.44698 97.4235996,1999.34798 94.7348224,1999.04198 C91.0232075,1998.61898 87.8750721,2001.44898 87.8750721,2004.99998 C87.8750721,2006.88998 88.7692896,2008.57398 90.1636971,2009.67298 C87.1074334,2010.79798 84.7871636,2013.27698 84.044024,2016.63598 C83.7745338,2017.85698 84.7789973,2018.99998 86.0539717,2018.99998 L101.945727,2018.99998 C103.221722,2018.99998 104.226185,2017.85698 103.955674,2016.63598"
+            transform="translate(-84, -1999)" />
         </svg>
-        <figcaption>Profile</figcaption>
-      </div>
+        <span>Profile</span>
+      </button>
     </div>
   </nav>
 
-
-  <div id="app"></div>
   <script type="module" src="./src/main.js"></script>
 </body>
 
