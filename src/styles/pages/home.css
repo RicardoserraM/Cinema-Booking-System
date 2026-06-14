@@ -13,6 +13,8 @@
 @import '../components/categories.css';
 @import '../components/billboard.css';
 @import '../components/rewards.css';
+@import '../components/ad-banner.css';
+@import '../components/membership-cta.css';
 @import '../components/footer.css';
 @import '../base/responsive-home.css';
 

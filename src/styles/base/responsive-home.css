@@ -241,10 +241,78 @@
     display: block;
   }
 
-  /* 1. MEMBER REWARDS SIDEBAR (Top sidebar - moved up for priority) */
-  #ctn-member-rewards {
+  /* SIDEBAR WRAPPER: stacks all sidebar sections vertically */
+  .sidebar-wrapper {
     grid-column: 3;
-    grid-row: 2;
+    grid-row: 2 / 7;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+  }
+
+  .sidebar-wrapper #ctn-filters-sidebar {
+    order: 1;
+  }
+
+  .sidebar-wrapper .ctn-ad-banner {
+    order: 2;
+    margin: 0;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sidebar-wrapper .ctn-ad-banner .ad-content {
+    height: 100%;
+    width: 100%;
+  }
+
+  .sidebar-wrapper .ctn-membership-cta {
+    order: 3;
+    margin: 0;
+    min-height: 280px;
+    padding: 2em 1.5em;
+  }
+
+  .sidebar-wrapper #ctn-member-rewards {
+    order: 4;
+  }
+
+  /* 3. AD BANNER (inside sidebar wrapper) */
+  .ctn-ad-banner {
+    margin: 0;
+  }
+
+  /* 4. MEMBERSHIP CTA (inside sidebar wrapper - compact) */
+  .ctn-membership-cta {
+    margin: 0;
+    min-height: auto;
+    padding: 2em 1.2em;
+  }
+
+  .ctn-membership-cta .membership-content {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.2em;
+    width: 100%;
+  }
+
+  .ctn-membership-cta .membership-text h2 {
+    font-size: 15px;
+  }
+
+  .ctn-membership-cta .membership-text p {
+    font-size: 12px;
+  }
+
+  .ctn-membership-cta .btn-membership {
+    padding: 0.7em 1.8em;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  /* MEMBER REWARDS SIDEBAR */
+  #ctn-member-rewards {
     align-self: start;
     margin: 0;
     width: 100%;
@@ -253,7 +321,7 @@
     background: rgba(20, 15, 15, 0.6);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(216, 48, 40, 0.2);
+    border: 1px solid rgba(216, 48, 40, 0.12);
     border-radius: 16px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -266,8 +334,8 @@
   }
 
   #ctn-member-rewards:hover {
-    border-color: rgba(216, 48, 40, 0.35);
-    box-shadow: 0 12px 40px rgba(216, 48, 40, 0.08);
+    border-color: rgba(216, 48, 40, 0.25);
+    box-shadow: 0 12px 40px rgba(216, 48, 40, 0.06);
   }
 
   .ctn-header-rewards {
@@ -279,7 +347,7 @@
   .ctn-header-rewards h2 {
     font-size: 20px;
     font-weight: 700;
-    border-left: 3px solid var(--buttons-color);
+    border-left: 3px solid rgba(216, 48, 40, 0.5);
     padding-left: 10px;
   }
 
@@ -317,25 +385,23 @@
     height: 2.8em;
     padding: 0.4em;
     border-radius: 8px;
-    border: 1px solid rgba(216, 48, 40, 0.2);
+    border: 1px solid rgba(216, 48, 40, 0.12);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 
   .ctn-rewards-info-icons:hover .ctn-icons-rewards {
-    border-color: var(--buttons-color);
-    box-shadow: 0 6px 15px rgba(216, 48, 40, 0.3);
-    background: rgba(216, 48, 40, 0.15);
+    border-color: rgba(216, 48, 40, 0.4);
+    box-shadow: 0 6px 15px rgba(216, 48, 40, 0.15);
+    background: rgba(216, 48, 40, 0.08);
   }
 
-  /* 2. ADVANCED FILTERS SIDEBAR (moved down to row 3) */
+  /* 2. ADVANCED FILTERS SIDEBAR */
   #ctn-filters-sidebar {
-    grid-column: 3;
-    grid-row: 3;
-    align-self: start;
-    background: rgba(20, 15, 15, 0.6);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    min-height: 280px;
+    background-color: rgba(18, 18, 18, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(216, 48, 40, 0.12);
     padding: 1.8em;
     border-radius: 16px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -345,13 +411,24 @@
   }
 
   .sidebar-header h3 {
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     font-weight: 700;
-    border-left: 3px solid var(--buttons-color);
-    padding-left: 10px;
-    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
     margin: 0;
+    letter-spacing: 0.3px;
+  }
+
+  .sidebar-header h3::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background: rgba(216, 48, 40, 0.5);
+    border-radius: 2px;
+    flex-shrink: 0;
   }
 
   .filter-group {
@@ -361,11 +438,21 @@
   }
 
   .filter-label {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    color: #aaa;
+    color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .filter-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.08), transparent);
   }
 
   .filter-options {
@@ -375,28 +462,32 @@
   }
 
   .filter-btn {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 6px;
-    padding: 6px 12px;
-    font-size: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
     font-weight: 600;
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    flex: 1;
+    min-width: 60px;
+    text-align: center;
   }
 
   .filter-btn:hover {
-    border-color: rgba(216, 48, 40, 0.5);
-    background: rgba(216, 48, 40, 0.08);
+    border-color: rgba(216, 48, 40, 0.25);
+    background: rgba(216, 48, 40, 0.06);
     color: #fff;
+    transform: translateY(-1px);
   }
 
   .filter-btn.active {
-    background: var(--buttons-color);
-    border-color: var(--buttons-color);
+    background: rgba(216, 48, 40, 0.15);
+    border-color: rgba(216, 48, 40, 0.3);
     color: #fff;
-    box-shadow: 0 0 12px rgba(216, 48, 40, 0.4);
+    box-shadow: 0 4px 15px rgba(216, 48, 40, 0.15);
   }
 
   .filter-select-wrapper {
@@ -406,22 +497,23 @@
 
   .filter-select {
     width: 100%;
-    background: #1a1515;
+    background: rgba(15, 10, 10, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 6px;
-    padding: 10px;
+    border-radius: 8px;
+    padding: 10px 32px 10px 12px;
     font-size: 13px;
     color: #fff;
     outline: none;
     cursor: pointer;
     appearance: none;
     transition: border-color 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .filter-select-wrapper::after {
-    content: '▼';
-    font-size: 10px;
-    color: #aaa;
+    content: '▾';
+    font-size: 12px;
+    color: var(--text-muted);
     position: absolute;
     right: 12px;
     top: 50%;
@@ -429,131 +521,22 @@
     pointer-events: none;
   }
 
+  .filter-select option {
+    background: #1a1515;
+    color: #fff;
+  }
+
   .filter-select:focus,
   .filter-select:hover {
-    border-color: var(--buttons-color);
-  }
-
-  /* 3. DULCERIA PROMOS (Full-width bottom section) */
-  #ctn-dulceria-promos {
-    grid-column: 2 / 4;
-    grid-row: 4;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-    padding: 2em;
-    background: rgba(20, 15, 15, 0.4);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  }
-
-  .ctn-header-dulceria h2 {
-    font-size: 32px;
-    font-weight: 700;
-    border-left: 4px solid var(--buttons-color);
-    padding-left: 16px;
-  }
-
-  .dulceria-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5em;
-  }
-
-  .dulceria-card {
-    display: flex;
-    gap: 1.5em;
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(216, 48, 40, 0.12);
-    border-radius: 16px;
-    padding: 1.5em;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .dulceria-card:hover {
     border-color: rgba(216, 48, 40, 0.3);
-    transform: translateY(-4px);
-    box-shadow:
-      0 12px 25px rgba(0, 0, 0, 0.5),
-      0 0 20px rgba(216, 48, 40, 0.08);
-  }
-
-  .dulceria-img-wrapper {
-    width: 80px;
-    height: 80px;
-    border-radius: 12px;
-    background: linear-gradient(
-      135deg,
-      rgba(216, 48, 40, 0.15) 0%,
-      rgba(20, 20, 20, 0.8) 100%
-    );
-    border: 1px solid rgba(216, 48, 40, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex-shrink: 0;
-  }
-
-  .promo-icon {
-    width: 38px;
-    height: 38px;
-    color: var(--buttons-color);
-  }
-
-  .promo-badge {
-    position: absolute;
-    top: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--buttons-color);
-    color: #fff;
-    font-size: 8px;
-    font-weight: 700;
-    padding: 2px 6px;
-    border-radius: 4px;
-    white-space: nowrap;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  }
-
-  .dulceria-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .dulceria-info h4 {
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    margin: 0 0 0.4em 0;
-  }
-
-  .dulceria-info p {
-    font-size: 13px;
-    color: #999;
-    line-height: 1.4;
-    margin: 0 0 0.6em 0;
-  }
-
-  .promo-price {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--buttons-color);
   }
 
   /* FOOTER */
   footer {
     margin: 0;
-    padding: 3em var(--margin-desktop);
+    padding: 5em var(--margin-desktop);
     height: auto;
-    gap: 1.5em;
+    gap: 2em;
     border-top: 1px solid var(--outline-variant);
     margin-bottom: 0;
     background: linear-gradient(
@@ -569,7 +552,7 @@
 
   .footer-brand .brand-name {
     display: inline;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 800;
     letter-spacing: 0.05em;
     color: var(--buttons-color);
@@ -578,7 +561,7 @@
   }
 
   .ctn-help-options {
-    gap: 2em;
+    gap: 3em;
     justify-content: center;
     flex-wrap: wrap;
   }
