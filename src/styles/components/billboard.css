@@ -105,3 +105,9 @@
   font-size: 11px;
   letter-spacing: 0.2px;
 }
+
+@media (max-width: 1023px) {
+  .movie-card-link:nth-child(n+7) {
+    display: none;
+  }
+}

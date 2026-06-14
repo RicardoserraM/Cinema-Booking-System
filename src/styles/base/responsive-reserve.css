@@ -1,4 +1,14 @@
-/* --- RESPONSIVE DESKTOP: RESERVE (Mobile-First) --- */
+/*
+ * ============================================================
+ * RESPONSIVE RESERVE — Mobile-First Breakpoints
+ * ============================================================
+ * - 600px+:  Wider schedules grid, centered seat layout
+ * - 1024px+: Two-column layout (seats | price sidebar)
+ *            Seats panel gets glass effect + border
+ * ============================================================
+ */
+
+/* Mobile bottom padding compensates for fixed .ctn-resume-total */
 
 @media (min-width: 600px) {
   .ctn-schedules {
@@ -192,10 +202,10 @@ body.reserve-page {
     align-items: stretch;
     gap: 2em;
     padding: 2.5em 2em 4.5em;
-    background: rgba(15, 10, 10, 0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(216, 48, 40, 0.25);
+    background-color: rgba(18, 18, 18, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(216, 48, 40, 0.12);
     border-radius: 16px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(216, 48, 40, 0.05);
     overflow: hidden;

@@ -1,4 +1,14 @@
-/* --- RESPONSIVE DESKTOP: HOME (Mobile-First) --- */
+/*
+ * ============================================================
+ * RESPONSIVE HOME — Mobile-First Breakpoints
+ * ============================================================
+ * - 768px+:  Tablet (3-col billboard, taller premiere)
+ * - 1024px+: Desktop (2-column grid layout, sidebar on col 3)
+ *
+ * The 1024px block also contains desktop-only overrides for
+ * sidebar widgets (filters, membership, rewards, ad-banner).
+ * ============================================================
+ */
 
 @media (min-width: 768px) {
   .ctn-peliculas-carteleras {
@@ -38,6 +48,11 @@
 }
 
 @media (min-width: 1024px) {
+  /* =====================
+   *   DESKTOP LAYOUT GRID
+   *   main uses a 4-column grid:
+   *     col 1: margin  |  col 2: main content  |  col 3: sidebar  |  col 4: margin
+   * ===================== */
   /* MAIN LAYOUT GRID */
   main {
     display: grid;
@@ -276,11 +291,6 @@
 
   .sidebar-wrapper #ctn-member-rewards {
     order: 4;
-  }
-
-  /* 3. AD BANNER (inside sidebar wrapper) */
-  .ctn-ad-banner {
-    margin: 0;
   }
 
   /* 4. MEMBERSHIP CTA (inside sidebar wrapper - compact) */
@@ -531,48 +541,4 @@
     border-color: rgba(216, 48, 40, 0.3);
   }
 
-  /* FOOTER */
-  footer {
-    margin: 0;
-    padding: 5em var(--margin-desktop);
-    height: auto;
-    gap: 2em;
-    border-top: 1px solid var(--outline-variant);
-    margin-bottom: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(18, 18, 18, 0.9) 0%,
-      rgba(0, 0, 0, 0.95) 100%
-    );
-  }
-
-  .footer-brand .logo {
-    display: none;
-  }
-
-  .footer-brand .brand-name {
-    display: inline;
-    font-size: 32px;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    color: var(--buttons-color);
-    text-transform: uppercase;
-    text-shadow: 0 0 15px rgba(216, 48, 40, 0.3);
-  }
-
-  .ctn-help-options {
-    gap: 3em;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .help-option {
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .copy-footer {
-    opacity: 0.6;
-  }
 }

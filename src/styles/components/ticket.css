@@ -23,7 +23,7 @@
 .ticket-header-bg {
   position: absolute;
   inset: 0;
-  background: url('./src/assets/imgs/img-premiere/mario.jpg') center/cover no-repeat;
+  background: url('../../assets/imgs/img-premiere/mario.jpg') center/cover no-repeat;
   filter: blur(4px) brightness(0.5);
   transform: scale(1.1);
 }

@@ -2,15 +2,19 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
-  margin: 2em 0 7em 0;
-  padding: 2em 1em;
+  margin: 0 0 5em 0;
+  padding: 5em var(--margin-desktop, 48px);
   width: 100%;
   height: auto;
-  min-height: 11.5em;
-  border-top: 1px solid #4e3431;
-  background-color: #0e0e0e;
+  gap: 2em;
+  border-top: 1px solid var(--outline-variant);
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0.9) 0%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
 }
 
 .footer-brand {
@@ -20,17 +24,33 @@ footer {
   text-decoration: none;
 }
 
+.footer-brand .logo {
+  display: none;
+}
+
+.footer-brand .brand-name {
+  display: inline;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--buttons-color);
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(216, 48, 40, 0.3);
+}
+
 .ctn-help-options {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: center;
+  gap: 3em;
+  flex-wrap: wrap;
 }
 
 .help-option {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--on-surface-variant);
-  letter-spacing: 1.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -42,5 +62,6 @@ footer {
 .copy-footer {
   font-size: 14px;
   font-weight: 600;
-  color: #685553;
+  color: var(--text-muted);
+  opacity: 0.6;
 }

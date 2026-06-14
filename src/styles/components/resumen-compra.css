@@ -8,8 +8,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 1em 1.4em;
-  border-top: 2px solid rgba(216, 48, 40, 0.2);
-  background: rgba(10, 8, 8, 0.85);
+  border-top: 1px solid rgba(216, 48, 40, 0.12);
+  background-color: rgba(18, 18, 18, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
