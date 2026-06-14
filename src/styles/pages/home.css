@@ -16,6 +16,11 @@
 @import '../components/footer.css';
 @import '../base/responsive-home.css';
 
+a.movie-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .desktop-only {
   display: none;
 }

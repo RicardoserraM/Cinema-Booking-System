@@ -11,7 +11,7 @@
 
 <body>
     <main class="main-finish-booking">
-        <article class="ctn-aviso-finish-booking">
+        <section class="success-ticket-panel">
             <div class="checkmark-container">
                 <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                     <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -22,21 +22,99 @@
             <h2 class="success-title">¡Tu reserva se ha realizado con éxito!</h2>
             <p class="success-subtitle">Gracias por elegir TicketFlick. Tu ticket está listo.</p>
 
-            <button type="button" class="btn-download-ticket" id="btn-download-ticket">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                    class="download-icon">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                Descargar ticket
-            </button>
-
-            <div class="ctn-finish-actions">
-                <a href="./index.html" class="btn-home">Volver al inicio</a>
+            <div class="ticket-card" data-movie-id="mario">
+                <div class="ticket-header">
+                    <div class="ticket-header-bg" id="ticket-bg" data-movie="mario"></div>
+                    <span class="ticket-badge" id="ticket-badge">PREMIERE NIGHT</span>
+                    <h2 class="ticket-movie-title" id="ticket-title">The Super Mario Galaxy</h2>
+                </div>
+                <div class="ticket-body">
+                    <div class="ticket-info-item">
+                        <span class="ticket-info-label">Cinema</span>
+                        <span class="ticket-info-value" id="ticket-cinema">TicketFlick IMAX</span>
+                    </div>
+                    <div class="ticket-info-item">
+                        <span class="ticket-info-label">Hall</span>
+                        <span class="ticket-info-value" id="ticket-hall">VIP 01</span>
+                    </div>
+                    <div class="ticket-info-item">
+                        <span class="ticket-info-label">Date &amp; Time</span>
+                        <span class="ticket-info-value" id="ticket-datetime">OCT 24, 2026 — 05:00 PM</span>
+                    </div>
+                    <div class="ticket-info-item">
+                        <span class="ticket-info-label">Seats</span>
+                        <span class="ticket-info-value ticket-seats" id="ticket-seats">D4, D5, D6</span>
+                    </div>
+                </div>
+                <div class="ticket-stub">
+                    <div class="ticket-qr-container" id="ticket-qr">
+                        <svg class="ticket-qr-svg" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="6" height="6" fill="#1a1515"/>
+                            <rect x="9" y="1" width="2" height="2" fill="#1a1515"/>
+                            <rect x="17" y="1" width="6" height="6" fill="#1a1515"/>
+                            <rect x="25" y="1" width="2" height="6" fill="#1a1515"/>
+                            <rect x="29" y="1" width="2" height="2" fill="#1a1515"/>
+                            <rect x="1" y="9" width="2" height="2" fill="#1a1515"/>
+                            <rect x="5" y="9" width="6" height="2" fill="#1a1515"/>
+                            <rect x="13" y="9" width="4" height="2" fill="#1a1515"/>
+                            <rect x="19" y="9" width="6" height="2" fill="#1a1515"/>
+                            <rect x="27" y="9" width="2" height="2" fill="#1a1515"/>
+                            <rect x="1" y="13" width="6" height="6" fill="#1a1515"/>
+                            <rect x="9" y="13" width="2" height="4" fill="#1a1515"/>
+                            <rect x="13" y="13" width="2" height="2" fill="#1a1515"/>
+                            <rect x="19" y="13" width="2" height="2" fill="#1a1515"/>
+                            <rect x="23" y="13" width="6" height="2" fill="#1a1515"/>
+                            <rect x="17" y="17" width="2" height="2" fill="#1a1515"/>
+                            <rect x="21" y="17" width="2" height="4" fill="#1a1515"/>
+                            <rect x="25" y="17" width="4" height="2" fill="#1a1515"/>
+                            <rect x="1" y="21" width="2" height="6" fill="#1a1515"/>
+                            <rect x="5" y="21" width="2" height="2" fill="#1a1515"/>
+                            <rect x="9" y="21" width="4" height="2" fill="#1a1515"/>
+                            <rect x="17" y="21" width="2" height="2" fill="#1a1515"/>
+                            <rect x="21" y="21" width="2" height="2" fill="#1a1515"/>
+                            <rect x="25" y="21" width="2" height="6" fill="#1a1515"/>
+                            <rect x="29" y="21" width="2" height="2" fill="#1a1515"/>
+                            <rect x="1" y="29" width="2" height="2" fill="#1a1515"/>
+                            <rect x="5" y="29" width="4" height="2" fill="#1a1515"/>
+                            <rect x="13" y="29" width="2" height="2" fill="#1a1515"/>
+                            <rect x="17" y="29" width="6" height="2" fill="#1a1515"/>
+                            <rect x="25" y="29" width="2" height="2" fill="#1a1515"/>
+                            <rect x="1" y="25" width="6" height="2" fill="#1a1515"/>
+                            <rect x="13" y="25" width="2" height="2" fill="#1a1515"/>
+                            <rect x="19" y="25" width="2" height="2" fill="#1a1515"/>
+                            <rect x="29" y="13" width="2" height="10" fill="#1a1515"/>
+                            <rect x="31" y="17" width="2" height="2" fill="#1a1515"/>
+                            <rect x="3" y="31" width="2" height="2" fill="#1a1515"/>
+                            <rect x="29" y="25" width="2" height="4" fill="#1a1515"/>
+                        </svg>
+                    </div>
+                    <span class="ticket-barcode" id="ticket-barcode">TX-782910-X</span>
+                </div>
             </div>
-        </article>
+
+            <div class="ticket-actions">
+                <button type="button" class="ticket-btn ticket-btn-share">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                    </svg>
+                    Share
+                </button>
+                <button type="button" class="ticket-btn ticket-btn-save">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Save PDF
+                </button>
+            </div>
+
+            <a href="./index.html" class="btn-back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+                </svg>
+                Volver al inicio
+            </a>
+        </section>
     </main>
     <script type="module" src="./src/finish-booking.js"></script>
 </body>

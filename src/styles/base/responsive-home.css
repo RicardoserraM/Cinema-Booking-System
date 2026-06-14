@@ -6,10 +6,26 @@
     gap: 1.5em;
   }
 
+  .ctn-img-pelicula {
+    width: 100%;
+    max-width: none;
+  }
+
+  .ctn-pelicula-cartelera h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
   .ctn-btns-categorias {
     overflow-x: visible;
     justify-content: flex-start;
     height: auto;
+    flex-wrap: wrap;
+  }
+
+  #ctn-categorias {
+    height: auto;
+    min-height: auto;
   }
 
   #ctn-premiere {
@@ -41,57 +57,17 @@
   /* PREMIERE HERO */
   #ctn-premiere {
     grid-column: 1 / -1;
-    position: relative;
     min-height: 80vh;
     border-radius: 0;
-    opacity: 1;
     margin-top: 0;
     margin-bottom: 0;
     padding: 64px var(--margin-desktop) 4em;
     justify-content: flex-end;
-    overflow: hidden;
     width: 100%;
-  }
-
-  #ctn-premiere::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.3) 40%,
-        rgba(0, 0, 0, 0) 70%
-      ),
-      radial-gradient(
-        ellipse 60% 50% at 50% 60%,
-        transparent 40%,
-        rgba(0, 0, 0, 0.5) 100%
-      );
-    z-index: 1;
-  }
-
-  #ctn-premiere::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(
-      ellipse 70% 50% at 50% 0%,
-      transparent 30%,
-      rgba(0, 0, 0, 0.6) 100%
-    );
-    pointer-events: none;
-    z-index: 1;
   }
 
   .ctn-description-premiere,
   .ctn-btns-premiere {
-    position: relative;
-    z-index: 2;
     padding-left: 0;
   }
 

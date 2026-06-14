@@ -1,0 +1,217 @@
+.ticket-card {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1a1515;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    0 0 80px rgba(216, 48, 40, 0.06);
+}
+
+/* ---------- HEADER ---------- */
+
+.ticket-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2em 1.5em 1.5em;
+  min-height: 180px;
+  overflow: hidden;
+}
+
+.ticket-header-bg {
+  position: absolute;
+  inset: 0;
+  background: url('./src/assets/imgs/img-premiere/mario.jpg') center/cover no-repeat;
+  filter: blur(4px) brightness(0.5);
+  transform: scale(1.1);
+}
+
+.ticket-header-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+.ticket-badge {
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #fff;
+  background: var(--buttons-color);
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin-bottom: 0.6em;
+}
+
+.ticket-movie-title {
+  position: relative;
+  z-index: 1;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* ---------- BODY (INFO GRID + PERFORATION) ---------- */
+
+.ticket-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2em;
+  padding: 1.5em;
+  position: relative;
+  border-bottom: 2px dashed rgba(216, 48, 40, 0.3);
+}
+
+.ticket-body::before,
+.ticket-body::after {
+  content: '';
+  position: absolute;
+  bottom: -11px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #000;
+  z-index: 2;
+}
+
+.ticket-body::before {
+  left: -11px;
+}
+
+.ticket-body::after {
+  right: -11px;
+}
+
+.ticket-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.ticket-info-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.ticket-info-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+.ticket-info-value.ticket-seats {
+  color: var(--buttons-color);
+  font-weight: 700;
+}
+
+/* ---------- STUB (QR + BARCODE + WAVY EDGES) ---------- */
+
+.ticket-stub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 2em 1.5em 2.5em;
+  background: #f5f0ed;
+  position: relative;
+}
+
+.ticket-stub::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background-image:
+    radial-gradient(circle at 6px -2px, transparent 6px, #f5f0ed 6px);
+  background-size: 12px 12px;
+  background-repeat: repeat-x;
+}
+
+.ticket-stub::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-image:
+    radial-gradient(circle at 50% 100%, transparent 5px, #f5f0ed 5px);
+  background-size: 10px 10px;
+  background-repeat: repeat-x;
+}
+
+.ticket-qr-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-qr-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.ticket-barcode {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #1a1515;
+  font-family: 'Courier New', monospace;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (min-width: 600px) {
+  .ticket-header {
+    min-height: 200px;
+    padding: 2.5em 2em 1.8em;
+  }
+
+  .ticket-movie-title {
+    font-size: 26px;
+  }
+
+  .ticket-body {
+    padding: 2em;
+    gap: 1.5em;
+  }
+
+  .ticket-stub {
+    padding: 2.5em 2em 3em;
+  }
+
+  .ticket-qr-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .ticket-info-value {
+    font-size: 14px;
+  }
+}

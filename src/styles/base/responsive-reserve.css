@@ -1,6 +1,11 @@
 /* --- RESPONSIVE DESKTOP: RESERVE (Mobile-First) --- */
 
 @media (min-width: 600px) {
+  .ctn-schedules {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+  }
+
   .ctn-top-seat,
   .ctn-bottom-seat {
     max-width: 440px;
