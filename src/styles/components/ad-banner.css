@@ -1,0 +1,135 @@
+.ctn-ad-banner {
+  margin: 1em;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 22, 12, 0.85) 0%,
+    rgba(15, 12, 8, 0.9) 100%
+  );
+  border: 1px solid rgba(200, 150, 80, 0.1);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ctn-ad-banner:hover {
+  border-color: rgba(200, 150, 80, 0.2);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(180, 130, 60, 0.04);
+  transform: translateY(-2px);
+}
+
+.ad-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 1.2em;
+  background:
+    radial-gradient(
+      ellipse 80% 100% at 0% 50%,
+      rgba(200, 150, 80, 0.06) 0%,
+      transparent 70%
+    );
+}
+
+.ad-label {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+
+.ad-media {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.ad-popcorn {
+  width: 100%;
+  height: 100%;
+}
+
+.ad-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  flex: 1;
+}
+
+.ad-text h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f0e0c0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.ad-text p {
+  font-size: 11px;
+  color: #a09070;
+  line-height: 1.3;
+}
+
+.ad-price {
+  font-size: 16px;
+  font-weight: 800;
+  color: #e0b050;
+  letter-spacing: -0.02em;
+  margin-top: 0.1em;
+}
+
+.ad-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
+  background: linear-gradient(160deg, #8a6a30 0%, #6a4e20 50%, #4d3718 100%);
+  color: #f0e0c0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow:
+    0 3px 12px rgba(60, 40, 15, 0.4),
+    inset 0 1px 0 rgba(200, 160, 100, 0.1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.ad-cta:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 20px rgba(80, 55, 20, 0.5),
+    inset 0 1px 0 rgba(200, 160, 100, 0.15);
+  background: linear-gradient(160deg, #9a7a3a 0%, #7a5a28 50%, #5a4220 100%);
+}
+
+.ad-cta:active {
+  transform: scale(0.95);
+}
+
+@media (min-width: 768px) {
+  .ctn-ad-banner {
+    margin: 0;
+  }
+
+  .ad-content {
+    padding: 1.2em 1.2em;
+  }
+}
