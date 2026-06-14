@@ -1,14 +1,9 @@
 /*
  * ============================================================
  * RESPONSIVE HOME — Mobile-First Breakpoints
- * ============================================================
  * - 768px+:  Tablet (3-col billboard, taller premiere)
  * - 1024px+: Desktop (2-column grid layout, sidebar on col 3)
- *
- * The 1024px block also contains desktop-only overrides for
- * sidebar widgets (filters, membership, rewards, ad-banner).
- * ============================================================
- */
+ *============================================================ */
 
 @media (min-width: 768px) {
   .ctn-peliculas-carteleras {
@@ -462,7 +457,7 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, rgba(255,255,255,0.08), transparent);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent);
   }
 
   .filter-options {
@@ -540,5 +535,4 @@
   .filter-select:hover {
     border-color: rgba(216, 48, 40, 0.3);
   }
-
 }

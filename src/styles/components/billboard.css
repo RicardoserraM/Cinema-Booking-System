@@ -107,7 +107,7 @@
 }
 
 @media (max-width: 1023px) {
-  .movie-card-link:nth-child(n+7) {
+  .movie-card-link:nth-child(n + 7) {
     display: none;
   }
 }
